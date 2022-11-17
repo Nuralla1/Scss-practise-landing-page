@@ -1,0 +1,40 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+@import "../../styles/fonts";
+@import "../../styles/_buttons";
+
+.main_section {
+  background: linear-gradient(
+      to right bottom,
+      rgba(139, 174, 248, 0.587),
+      rgba(40, 13, 138, 0.363)
+    ),
+    url(../../assets/cover_4.jpg);
+  height: 80vh;
+  overflow: hidden;
+  background-size: cover;
+
+  .content {
+    margin: 16rem;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      color: $main-color;
+      text-shadow: 3px 3px 3px $main-color;
+    }
+
+    button {
+      @include button;
+    }
+    button:hover {
+      @include hover;
+    }
+  }
+  .bottom_text {
+    margin-left: 1rem;
+    p {
+      color: $main-color;
+    }
+  }
+}
